@@ -82,5 +82,12 @@ Some other things that should improve latency:
 VSync is disabled and on a PI4 you should get > 200FPS if everything went ok and you have configured the PI correctly.
 
 
+CMARS MODS:
+The code won't build if wlan1 is connected to wifi. Connect with wlan0 (onboard interface) through dhcpcd.conf and build with make -j4 in gs folder. You must also move components folder to gs folder since the tree is not correct in the MakeFile file.
+Then, update drivers to TL-WN722N to allow monitor mode (original drivers don't support this mode):
+https://forums.raspberrypi.com/viewtopic.php?t=297324
+
+
+
 
 
